@@ -5,9 +5,8 @@ using MySql.Data.MySqlClient;
 
 namespace PackagingChecker {
     public class DatabaseConnector {
-        private const string ConnectionString = "server=localhost;user=root;database=hcgroup;port=3306;password=koeklepelspeldspatie99!";
 
-        private const string exampleConnectionString =
+        private const string ConnectionString =
             "server=localhost;user=john;database=HCpackaging;port=3306;password=pass";
 
         private static readonly Random RandomGenerator = new();

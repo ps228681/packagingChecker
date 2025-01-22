@@ -36,7 +36,6 @@ namespace PackagingChecker
         private void UpdatePackagingsList()
         {
             DateTime currentDate = DateTime.Now;
-            DataTable table = null;
 
             // check if the last update was longer than 2 hours ago
             if (lastUpdate == null || (currentDate - lastUpdate).TotalHours > 2)
@@ -102,14 +101,12 @@ namespace PackagingChecker
 
         private List<ContainerPackingResult> PackProducts()
         {
-            // create a list for storing the results of the packing algorithm
-            var results = new List<ContainerPackingResult>();
 
             // select an algorithm to use
             var algorithms = new List<int> { (int)AlgorithmType.EB_AFIT };
 
             // use the algorithm to fit the products inside the packages
-            results = PackingService.Pack(_containers, _products, algorithms);
+            var results = PackingService.Pack(_containers, _products, algorithms);
 
             return results;
         }

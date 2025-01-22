@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
-using Avalonia;
 using Avalonia.Controls;
 
 namespace PackagingChecker
@@ -15,7 +14,7 @@ namespace PackagingChecker
         private readonly PackagingChecker _packageFitter = new();
         private readonly bool _shouldSeed = false;
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public new event PropertyChangedEventHandler PropertyChanged;
 
         private ObservableCollection<CustomerOrder> _orders;
         private ObservableCollection<Product> _productsInOrder;
@@ -141,13 +140,13 @@ namespace PackagingChecker
             if (result == null)
             {
                 result = "No packaging found for this order.";
-                bestPackagingText.Foreground = Avalonia.Media.Brushes.Red;
+                BestPackagingText.Foreground = Avalonia.Media.Brushes.Red;
             }
             else
             {
-                bestPackagingText.Foreground = Avalonia.Media.Brushes.White;
+                BestPackagingText.Foreground = Avalonia.Media.Brushes.White;
             }
-            bestPackagingText.Text = result;
+            BestPackagingText.Text = result;
             Console.WriteLine($"Best packaging for order {orderId}: {result}");
         }
     }

@@ -175,3 +175,4 @@
 /home/jorn/GitHub/packagingChecker/obj/Debug/net8.0/PackagingChecker.genruntimeconfig.cache
 /home/jorn/GitHub/packagingChecker/obj/Debug/net8.0/ref/PackagingChecker.dll
 /home/jorn/GitHub/packagingChecker/bin/Debug/net8.0/Sharp3DBinPacking.dll
+/home/jorn/GitHub/packagingChecker/obj/Debug/net8.0/PackagingChecker.sourcelink.json
